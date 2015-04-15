@@ -1,0 +1,82 @@
+\begin{table}
+    \captiontable{A nice 2-column table.}
+    \centering
+    \begin{tabular}{p{3cm} l}
+        \toprule
+        \multicolumn{1}{N}{Components} & \multicolumn{1}{N}{Names}\\
+        \cmidrule(){1-1}\cmidrule(){2-2}
+        Processor     & Ultra company \\
+        RAM           & 1\,TB         \\
+        OS            & Unix          \\
+        Graphics Card & Fancy         \\         
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}
+    \captiontable{Two-column splitted with indented separation lines.}
+    \centering
+    \begin{tabular}{p{3cm} l}
+        \toprule
+        \multicolumn{1}{N}{Parameters} & \multicolumn{1}{N}{Values}\\
+        \cmidrule(lr){1-1}\cmidrule(lr){2-2}
+        Processor     & Ultra company \\
+        RAM           & 1\,TB         \\
+        OS            & Unix          \\     
+        Graphics Card & Fancy         \\         
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \footnotesize
+    \captiontable{Table with multicolums of different categories.}
+    \begin{tabular}{r r r r r r} 
+        \toprule
+        \multicolumn{1}{V{2em}}{ID} & \multicolumn{2}{N}{Parameter permutations} & \multicolumn{3}{V{15em}}{Performance compared to older method} \\
+
+        \cmidrule(lr){2-3}\cmidrule(lr){4-6} 
+        
+        & \multicolumn{1}{V{5em}}{Parameter A} & \multicolumn{1}{V{5em}}{Parameter B}  & \multicolumn{1}{N}{Duration} & \multicolumn{1}{N}{CPU load} & \multicolumn{1}{V{3.5em}}{Memory} \\
+        & \multicolumn{1}{N}{[Hz]}             & \multicolumn{1}{N}{[\%]}              & \multicolumn{1}{N}{[s]}      & \multicolumn{1}{N}{[\%]}     & \multicolumn{1}{N}{[\%]}  \\
+        
+        \cmidrule(lr){1-1}\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}%
+        \cmidrule(lr){5-5}\cmidrule(lr){6-6}
+        3    & 300       & 1.7     & 30  & 30  & 19   \\
+        7    & 250       & 2.5     & 36  & 36  & 25   \\
+        9    & 200       & 2.6     & 43  & 42  & 30   \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\begin{table}[!ht]
+    \centering
+    \footnotesize
+    
+    \captiontable{Table with multirows and multicolumns.}
+    \begin{tabular}{r l r r r r r}
+        \toprule
+        \multicolumn{1}{V{1em}}{\#} &
+        \multicolumn{1}{V{4.5em}}{State} &
+        \multicolumn{4}{N}{Parameters} &
+        \multicolumn{1}{V{3.5em}}{Measure} \\
+        
+        \cmidrule(lr){3-6}
+        
+        & & \multicolumn{1}{V{4.5em}}{Value} & \multicolumn{1}{V{4.5em}}{Wow} & \multicolumn{1}{V{4.5em}}{Awesome percentage} & \multicolumn{1}{V{4.5em}}{Factor}  \\
+        & & \multicolumn{1}{N}{[Hz]} & \multicolumn{1}{N}{[s]} & \multicolumn{1}{N}{[\%]} & & \multicolumn{1}{N}{$\cdot 10^{-3}$}\\
+        
+        \cmidrule(r){1-1}\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}\cmidrule(lr){5-5}\cmidrule(lr){6-6}\cmidrule(l){7-7}
+        
+        \multirow{2}{*}{1} & State A  & 5000  & 8  & 166 & \multirow{2}{*}{2.96} &  \multirow{2}{*}{1.66}\\
+                           & State B  & 10000 & 10 & 260 &                       & \\
+                           
+        \cmidrule(r){1-1}\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}\cmidrule(lr){5-5}\cmidrule(lr){6-6}\cmidrule(l){7-7}
+        
+        \multirow{2}{*}{2} & State A   & 5000  & 8  & 166 & \multirow{2}{*}{2.83} & \multirow{2}{*}{0.60}\\
+                           & State B & 15000 & 10 & 365 &                         & \\
+        \bottomrule
+    \end{tabular}
+\end{table}

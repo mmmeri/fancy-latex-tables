@@ -1,0 +1,72 @@
+\documentclass[
+		a4paper,            % Set paper size
+		11pt,               % Set font size
+]{memoir}
+
+
+% % % % % % % 
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[sc,osf]{mathpazo} % for math (remove osf to use normal numbers instead of medieval [ger: minuskelziffern])
+\usepackage{amsmath}	
+\usepackage{bm}
+	
+\usepackage{tabularx}         % fancy tables
+\usepackage{booktabs}         % fancy tables
+\usepackage{multirow}         % fancy tables
+
+% % % % % % 
+% Tables
+\makeatletter
+\newcommand{\armultirow}[3]{%
+  \multicolumn{#1}{#2}{%
+    \begin{picture}(0,0)%
+      \put(0,0){%
+        \begin{tabular}[t]{@{}#2@{}}%
+          #3%
+        \end{tabular}%
+      }%
+    \end{picture}%
+  }%
+}%
+\newcolumntype{f}{>{$}l<{$}}
+\newcolumntype{n}{l}
+\newcolumntype{N}{>{\scriptsize}l}
+\newcolumntype{v}[1]{>{\raggedright\hspace{0pt}}p{#1}}
+\newcolumntype{V}[1]{>{\scriptsize\raggedright\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{%
+  >{\begin{turn}{90}\begin{minipage}{#1}\scriptsize\raggedright\hspace{0pt}}l%
+  <{\end{minipage}\end{turn}}%
+}
+\newcolumntype{x}{>{\scriptsize\raggedright\hspace{0pt}}X}
+
+
+% % % % % %
+% Captions
+
+% General 
+\captionnamefont{\normalsize}
+\captiontitlefont{\footnotesize}
+
+% Figure captions
+\renewcommand{\fnum@figure}{\textbf
+     {\figurename~\thefigure}}
+
+% Tables captions
+\makeatletter
+\newcommand{\captiontable}[2][\@empty]{
+    \captionnamefont{\scshape\hfill}
+    \captiondelim{\hfill}
+    \captionstyle{\centerlastline\\}
+\setlength{\belowcaptionskip}{10pt}
+\ifx \@empty#1 \caption{#2}\else \caption[#1]{#2}\fi}
+\makeatother
+
+% % % % % % 
+% Begin of main document
+\begin{document}
+
+\include{templates}
+
+\end{document} 
