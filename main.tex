@@ -1,16 +1,10 @@
-\documentclass[
-		a4paper,            % Set paper size
-		11pt,               % Set font size
-]{memoir}
-
+\documentclass[a4paper,11pt]{memoir}
 
 % % % % % % % 
 % Packages
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
-\usepackage[sc,osf]{mathpazo} % for math (remove osf to use normal numbers instead of medieval [ger: minuskelziffern])
-\usepackage{amsmath}	
-\usepackage{bm}
+\usepackage[sc,osf]{mathpazo}
 	
 \usepackage{tabularx}         % fancy tables
 \usepackage{booktabs}         % fancy tables
@@ -44,15 +38,6 @@
 
 % % % % % %
 % Captions
-
-% General 
-\captionnamefont{\normalsize}
-\captiontitlefont{\footnotesize}
-
-% Figure captions
-\renewcommand{\fnum@figure}{\textbf
-     {\figurename~\thefigure}}
-
 % Tables captions
 \makeatletter
 \newcommand{\captiontable}[2][\@empty]{
@@ -66,7 +51,6 @@
 % % % % % % 
 % Begin of main document
 \begin{document}
-
+	\pagestyle{empty}
 \include{templates}
-
 \end{document} 
